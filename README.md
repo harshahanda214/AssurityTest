@@ -1,4 +1,3 @@
-# AssurityTest
 **Technical Assignment**
 Using the API given below create an automated test with the listed acceptance criteria:
 
