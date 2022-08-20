@@ -65,9 +65,9 @@ import requests
 import json
 2. The development was done using python 3.10 version and Pycharm community edition.
 3. The packages were download from the Pycharm Install package.
-4. The basic commands of API requests and response were used for validation.
+4. The first task is to get the api given in the test and then save its response in the response object.
 response = requests.get("https://api.tmsandbox.co.nz/v1/Categories/6327/Details.json?catalogue=false")
-# get the response status OK or 200 of the api
+Another task is to check if the api is responding correctly which means the response code fetched from the API is OK or 200 which can be achived using the response.ok mehtod and then saving the response in a python variable.
 response_status = response.ok
 print("API response status", ";", response_status)
 5. Once the status of the API was confirmed to be 200, the Json object was then converted into the python dictionary by suing below command
