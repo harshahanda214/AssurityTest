@@ -21,6 +21,15 @@ Points will be awarded for meeting the criteria, style and the use of good pract
 We want to see your best work - no lazy coding or comments.
 We would appreciate it if you could please return your submission within one week of this email.
 
+Jump to:
+
+- [Getting Started](#getting-started)
+- [Description](#description)
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Running the Test](#running-the-test)
+- [Development](#development)
+- [Testing](#testing)
 
 ## **Getting started**
 Follow the setup procedure to get the Python end-to-end testing framework up and running. Estimated time 5min.
@@ -60,39 +69,56 @@ To use the python code. Follow the steps given below:
 -----------
 
 1. The development required understanding of python packages required for the API requests and response.
-Packages:
-import requests
-import json
+
+    Packages:
+
+    `import requests`
+
+    `import json`
+
 2. The development was done using python 3.10 version and Pycharm community edition.
 3. The packages were download from the Pycharm Install package.
 4. The first task is to get the api given in the test and then save its response in the response object.
-response = requests.get("https://api.tmsandbox.co.nz/v1/Categories/6327/Details.json?catalogue=false")
+
+     `response = requests.get("https://api.tmsandbox.co.nz/v1/Categories/6327/Details.json?catalogue=false")`
+
 Another task is to check if the api is responding correctly which means the response code fetched from the API is OK or 200 which can be achived using the response.ok mehtod and then saving the response in a python variable.
-response_status = response.ok
-print("API response status", ";", response_status)
+
+    `response_status = response.ok
+     print("API response status", ";", response_status)`
+
 5. Once the status of the API was confirmed to be 200, the Json object was then converted into the python dictionary by suing below command
-dict_values = response.json()
+
+     `dict_values = response.json()`
+
 6.The dictonary values can then be manipulated using the below code:
-Name = dict_values['Name']
-if Name == 'Carbon credits':
-    print("Name", ":", Name)
-else:
-    False
+
+     `Name = dict_values['Name']
+      if Name == 'Carbon credits':
+         print("Name", ":", Name)
+      else:
+         False`
+
 7. The code above takes the dictionary key Name and stores its value in the Name variable. If the Name is Carbon credits then the IF condition passes otherwise False.
 8. The similar approach is followed for validating the CanReList parameter of the API.
-# Fetching Canrelist
-Can_relist = dict_values['CanRelist']
-if Can_relist:
-   print("CanRelist", ":", Can_relist)
-else:
-    False
+
+     `Can_relist = dict_values['CanRelist']
+      if Can_relist:
+         print("CanRelist", ":", Can_relist)
+      else:
+         False`
+    
 9. Once the Name and CanReList values are validated. Then fetch the Promotions element using the below code. The type for the Promotions element is a list type.
 The best way to fetch values from a list is to use the FOR loop.
-print(type(prom_data))
-# Fetching name and description from promotions element
-for i in prom_data:
-    if i['Name'] == 'Gallery' and i['Description'] == 'Good position in category':
-        print("Name = ", i['Name'], ",", "Description", i['Description'])
+
+       `print(type(prom_data))`
+
+Fetching name and description from promotions element
+
+      `for i in prom_data:
+         if i['Name'] == 'Gallery' and i['Description'] == 'Good position in category':
+            print("Name = ", i['Name'], ",", "Description", i['Description'])`
+        
 10. The print statements above were used to present the required acceptance criteria values. 
 
 
@@ -101,17 +127,22 @@ for i in prom_data:
 
 1. To fulfill the acceptance criteria, validated the Name and CanRelist parameter of the API was validated using the if else condition.
 Validate Name:
-if Name == 'Carbon credits':
-    print("Name", ":", Name)
-else:
-    False
+
+        `if Name == 'Carbon credits':
+             print("Name", ":", Name)
+         else:
+             False`
+    
 Validate CanReList:
-if Can_relist:
-   print("CanRelist", ":", Can_relist)
-else:
-    False
+
+        `if Can_relist:
+            print("CanRelist", ":", Can_relist)
+         else:
+            False`
+    
 2. To fulfill the acceptance criteria, validated the promotions parameter's Name and Description of the API was validated using the for loop and iteration over list.
-    if i['Name'] == 'Gallery' and i['Description'] == 'Good position in category':
+    
+         `if i['Name'] == 'Gallery' and i['Description'] == 'Good position in category':`
 
 Author
 Harsha Arora
