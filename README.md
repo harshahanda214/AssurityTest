@@ -113,7 +113,7 @@ else:
 2. To fulfill the acceptance criteria, validated the promotions parameter's Name and Description of the API was validated using the for loop and iteration over list.
     if i['Name'] == 'Gallery' and i['Description'] == 'Good position in category':
 
-
-
+Author
+Harsha Arora
 
 
